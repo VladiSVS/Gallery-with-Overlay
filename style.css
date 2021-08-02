@@ -1,0 +1,33 @@
+body {
+    height: 100vh;
+    background-color: #fff;
+    font-family: sans-serif;
+    font-size: 1em;
+}
+body, section > div > .overlay {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+section {
+    display: grid;
+    grid-template-columns: repeat(3, 250px);
+    grid-template-rows: repeat(3, 250px);
+    gap: 5px;
+}
+section > div {
+    overflow: hidden;
+}
+
+section > div > .overlay {
+    width: 250px;
+    height: 250px;
+    position: relative;
+    bottom: 0;
+    transition: all 0.3s;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.5)
+}
+section > div > img:hover + .overlay, section > div > .overlay:hover {
+    bottom: 255px;
+}
